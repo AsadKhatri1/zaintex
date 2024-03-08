@@ -18,6 +18,7 @@
 }
 .car-img {
   min-height: 38vh;
+  max-height: auto;
 }
 
 .nav-link {

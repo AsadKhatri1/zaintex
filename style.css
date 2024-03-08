@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 .carousel {
-  max-height: 65vh;
+  max-height: 67vh;
   height: auto;
 }
 .carousel-inner {
@@ -20,7 +25,28 @@
   position: relative;
 }
 
+.footer-a {
+  margin: 3px 10px;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1.2rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.footer-link {
+  list-style: none;
+}
 .nav-link:hover:after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  border-color: #d88450;
+  border-width: 0 0 2px;
+  border-style: solid;
+}
+.nav-link:active:after {
   content: "";
   width: 100%;
   position: absolute;
@@ -74,9 +100,26 @@
   align-items: center;
   justify-content: center;
 }
+.col-center {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
 .card-text {
   color: #a04000;
   font-weight: 700;
+}
+footer {
+  margin: 0;
+  background-color: rgb(22, 22, 22);
+  color: whitesmoke;
+}
+.rights {
+  padding: 10px 0px;
+  background-color: #000000;
+  color: white;
 }
 
 @media only screen and (max-width: 786px) {

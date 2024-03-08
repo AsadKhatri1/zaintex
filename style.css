@@ -69,7 +69,22 @@
 }
 .center {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+}
+.card-text {
+  color: #a04000;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 786px) {
+  .section-values {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
 }

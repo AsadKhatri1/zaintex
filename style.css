@@ -6,7 +6,7 @@
   font-family: "Poppins", sans-serif;
 }
 .carousel {
-  max-height: 67vh;
+  max-height: 65vh;
   height: auto;
 }
 .carousel-inner {
@@ -17,7 +17,7 @@
   object-fit: cover;
 }
 .car-img {
-  min-height: 38vh;
+  max-height: 38vh;
 }
 
 .nav-link {

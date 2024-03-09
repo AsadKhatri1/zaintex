@@ -88,6 +88,11 @@
   font-size: 3rem;
   color: #000000;
 }
+.small-heading-main {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  color: #000000;
+}
 .section-heading {
   background-image: linear-gradient(to right, #572300, #572300);
 }
@@ -134,7 +139,7 @@ footer {
 .why-list {
   list-style-type: disc;
   font-weight: bold;
-  list-style-position: inside;
+  /* list-style-position: inside; */
 }
 .why-list::marker {
   color: #a04000;

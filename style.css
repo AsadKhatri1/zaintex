@@ -48,16 +48,6 @@
   border-width: 0 0 2px;
   border-style: solid;
 }
-.nav-link:active:after {
-  content: "";
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 1px;
-  border-color: #d88450;
-  border-width: 0 0 2px;
-  border-style: solid;
-}
 
 .span-text {
   color: #c75103;
@@ -99,6 +89,10 @@
 .card-img-top {
   height: 128px;
   width: 128px;
+}
+.card-img-service {
+  height: 150px;
+  width: 250px;
 }
 .center {
   display: flex;
@@ -144,6 +138,29 @@ footer {
 .why-list::marker {
   color: #a04000;
   font-size: 22px;
+}
+
+.services-bg {
+  background-color: #ffffff;
+  min-height: 90vh;
+}
+
+.btn-learn {
+  background-color: #c75103;
+  color: white;
+}
+.btn-learn:hover {
+  color: #c75103;
+  background-color: white;
+  border: 1px solid #c75103;
+}
+.card-service {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.card-service:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
 }
 @media only screen and (max-width: 786px) {
   .section-values {

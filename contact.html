@@ -98,19 +98,17 @@
               <input
                 type="text"
                 class="form-control"
-                id="exampleInputEmail1"
+                id="Name"
                 aria-describedby="emailHelp"
               />
             </div>
 
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label"
-                >Email address</label
-              >
+              <label for="Email1" class="form-label">Email address</label>
               <input
                 type="email"
                 class="form-control"
-                id="exampleInputEmail1"
+                id="Email"
                 aria-describedby="emailHelp"
               />
               <div id="emailHelp" class="form-text">
@@ -131,7 +129,13 @@
               ></textarea>
             </div>
 
-            <button type="submit" class="btn btn-learn my-4">Submit</button>
+            <button
+              type="button"
+              class="btn btn-learn my-4"
+              onclick="sendEmail()"
+            >
+              Submit
+            </button>
           </form>
         </div>
       </div>
@@ -203,10 +207,60 @@
       </div>
     </footer>
     <div class="text-center rights">All rights reserved © www.zaintex.com</div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      let number = 1;
+      async function sendEmail() {
+        number = number + 1;
+
+        let name = document.getElementById("Name").value;
+        let email = document.getElementById("Email").value;
+        let message = document.getElementById("message").value;
+        let body =
+          "Name : " +
+          name +
+          "<br/> Email : " +
+          email +
+          "<br/> Message : " +
+          message;
+
+        // Email.send({
+        //   Host: "smtp.elasticemail.com",
+        //   Port: 2525,
+        //   Username: "hafizasad398@gmail.com",
+        //   Password: "13F20CAC980B3608510FDB299E473C8278D3",
+        //   To: "asadkhatri2410@gmail.com",
+        //   From: "hafizasad398@gmail.com",
+        //   Subject: `Zaintex | Order query | Order # ${number}`,
+        //   Body: body,
+        // }).then((message) => {
+        //   alert(message);
+
+        //   document.getElementById("Name").value = "";
+        //   document.getElementById("Email").value = "";
+        //   document.getElementById("message").value = "";
+        // });
+
+        await Email.send({
+          SecureToken: "fd561620-3a39-4e10-814b-d028d9970c51",
+          To: "asadkhatri2410@gmail.com",
+          From: "hafizasad398@gmail.com",
+          Subject: `Zaintex | Order query | Query # ${number}`,
+          Body: body,
+        }).then((message) => {
+          alert(message);
+
+          document.getElementById("Name").value = "";
+          document.getElementById("Email").value = "";
+          document.getElementById("message").value = "";
+        });
+      }
+    </script>
   </body>
 </html>

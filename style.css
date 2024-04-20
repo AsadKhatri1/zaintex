@@ -123,11 +123,11 @@ footer {
   color: white;
 }
 .mail {
-  color: white;
+  color: #f07625;
   text-decoration: none;
 }
 .mail:hover {
-  color: #f07625;
+  color: white;
 }
 
 .why-list {
